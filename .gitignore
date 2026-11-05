@@ -1,0 +1,9 @@
+Entregável/
+Mockups/
+assets/_old_wireframes/
+assets/*.png
+assets/preview_p*
+assets/preview_b*
+assets/preview_01.webp
+.DS_Store
+Thumbs.db

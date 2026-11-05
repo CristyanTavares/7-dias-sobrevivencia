@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protocolo de Sobrevivência 7 Dias — O Guia Definitivo de Prontidão Doméstica</title>
+  <meta name="description" content="Aprenda o passo a passo seguro e sem histeria para proteger sua família por 7 dias sem luz, água encanada ou supermercados. 100 páginas + 50 páginas de bônus." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ───────────── RESET & BASE ───────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --surv-black:       #070D14;
+      --surv-dark:        #0A121A;
+      --surv-navy:        #0F1C2B;
+      --surv-surface:     #152436;
+      --surv-border:      rgba(255, 255, 255, 0.10);
+      --surv-amber:       #F59E0B;
+      --surv-amber-glow:  rgba(245, 158, 11, 0.25);
+      --surv-red:         #E11D48;
+      --surv-red-hover:   #BE123C;
+      --surv-green:       #10B981;
+      --surv-white:       #FFFFFF;
+      --surv-gray:        #F8FAFC;
+      --surv-gray-card:   #FFFFFF;
+      --surv-gray-border: #E2E8F0;
+      --surv-text:        #0F172A;
+      --surv-muted:       #64748B;
+      --surv-text-light:  rgba(255, 255, 255, 0.85);
+
+      --gradient-hero:    linear-gradient(145deg, #070D14 0%, #0F1D2C 55%, #0A121A 100%);
+      --gradient-cta:     linear-gradient(135deg, #10B981 0%, #059669 100%);
+      --gradient-amber:   linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+      --gradient-dark:    linear-gradient(145deg, #0F1C2B 0%, #0A121A 100%);
+      --shadow-card:      0 8px 32px rgba(0,0,0,0.12);
+      --shadow-btn:       0 6px 24px rgba(16, 185, 129, 0.40);
+      --shadow-amber:     0 6px 24px rgba(245,158,11,0.35);
+      --radius:           16px;
+      --radius-sm:        10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--surv-white);
+      color: var(--surv-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a   { text-decoration: none; color: inherit; }
+
+    /* ───────────── TOP NEWS ALERT BAR ───────────── */
+    .news-ticker-bar {
+      background: #7F1D1D;
+      color: #FEE2E2;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      position: relative;
+      z-index: 50;
+      text-align: center;
+    }
+    .news-ticker-badge {
+      background: #EF4444;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      animation: pulseAlert 1.8s infinite;
+    }
+    @keyframes pulseAlert {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.85; transform: scale(1.04); }
+    }
+
+    /* ───────────── UTILITY ───────────── */
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .section    { padding: 85px 0; }
+    .section-dark { background: var(--surv-dark); color: var(--surv-white); }
+    .section-navy { background: var(--surv-navy); color: var(--surv-white); }
+    .section-gray { background: var(--surv-gray); }
+    .text-center { text-align: center; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--surv-amber); color: #000;
+      font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 50px;
+    }
+    .badge-red { background: var(--surv-red); color: #fff; }
+    .badge-navy { background: var(--surv-surface); color: var(--surv-amber); border: 1px solid rgba(245,158,11,0.3); }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 50px;
+      background: rgba(245,158,11,0.15); color: #B45309;
+    }
+    .tag-red { background: rgba(225,29,72,0.12); color: var(--surv-red); }
+
+    /* ───────────── BUTTONS ───────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 18px 36px; border-radius: 50px;
+      font-size: 17px; font-weight: 800; letter-spacing: 0.3px;
+      cursor: pointer; border: none; transition: transform .2s, box-shadow .2s, opacity .2s;
+      text-align: center;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--gradient-cta); color: #fff;
+      box-shadow: var(--shadow-btn);
+    }
+    .btn-primary:hover { box-shadow: 0 10px 32px rgba(16, 185, 129, 0.60); }
+    .btn-amber {
+      background: var(--gradient-amber); color: #070D14;
+      box-shadow: var(--shadow-amber);
+    }
+    .btn-amber:hover { box-shadow: 0 10px 32px rgba(245,158,11,0.55); }
+    .btn-lg { font-size: 19px; padding: 22px 46px; }
+    .btn-full { width: 100%; display: flex; }
+
+    /* ───────────── SECTION TITLES ───────────── */
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 900; line-height: 1.18;
+      margin-bottom: 16px;
+    }
+    .section-title span.accent-amber { color: var(--surv-amber); }
+    .section-title span.accent-red   { color: var(--surv-red); }
+    .section-sub {
+      font-size: 17px; color: var(--surv-muted); margin-bottom: 48px; max-width: 680px; line-height: 1.65;
+    }
+    .section-title-center + .section-sub { margin-left: auto; margin-right: auto; }
+
+    /* ───────────── HERO ───────────── */
+    #hero {
+      background: var(--gradient-hero);
+      color: var(--surv-white);
+      padding: 65px 0 85px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 75% 20%, rgba(245,158,11,0.10) 0%, transparent 60%),
+                  radial-gradient(circle at 20% 80%, rgba(225,29,72,0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
+    }
+    .hero-eyebrow-line {
+      width: 32px; height: 3px; background: var(--surv-amber); border-radius: 2px;
+    }
+    .hero-eyebrow-text {
+      font-size: 12px; font-weight: 800; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--surv-amber);
+    }
+
+    .hero-pretitle {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 12px;
+    }
+    .hero-pretitle-pages {
+      display: inline-block;
+      background: var(--surv-amber);
+      color: #070D14;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      vertical-align: middle;
+      margin-left: 4px;
+      box-shadow: 0 2px 12px rgba(245,158,11,0.40);
+    }
+
+    .hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(32px, 4.8vw, 54px);
+      font-weight: 900; line-height: 1.12;
+      margin-bottom: 22px;
+    }
+    .hero-title .accent-red { color: var(--surv-red); display: block; }
+    .hero-title .accent-amber { color: var(--surv-amber); }
+
+    .hero-sub {
+      font-size: 17px; color: rgba(255,255,255,0.82);
+      line-height: 1.65; margin-bottom: 32px;
+    }
+
+    .hero-features {
+      display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px;
+      list-style: none;
+    }
+    .hero-feature {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.90);
+    }
+    .hero-feature-icon {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: rgba(245,158,11,0.18); border: 1px solid var(--surv-amber);
+      color: var(--surv-amber);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 13px; margin-top: 1px;
+    }
+
+    .hero-cta-group {
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .hero-cta-note {
+      font-size: 13px; color: rgba(255,255,255,0.60);
+      display: flex; align-items: center; gap: 8px; justify-content: flex-start;
+    }
+
+    .hero-visual {
+      position: relative; display: flex; align-items: center; justify-content: center;
+    }
+    .hero-mockup-wrapper {
+      position: relative; z-index: 2; width: 100%;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-mockup-img {
+      border-radius: 14px;
+      width: 100%;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      transition: transform .3s;
+    }
+    .hero-mockup-img:hover { transform: scale(1.02); }
+
+    .hero-float-badge {
+      position: absolute;
+      background: var(--surv-amber); color: #070D14;
+      font-size: 13px; font-weight: 900;
+      padding: 10px 18px; border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(245,158,11,0.40);
+      white-space: nowrap;
+      z-index: 3;
+    }
+    .hero-float-badge.top-left { top: -10px; left: -15px; }
+    .hero-float-badge.bottom-right {
+      bottom: 10px; right: -15px;
+      background: var(--surv-red); color: #fff;
+      box-shadow: 0 8px 24px rgba(225,29,72,0.40);
+    }
+
+    /* ───────────── SOCIAL PROOF STRIP ───────────── */
+    #social-strip {
+      background: var(--surv-navy);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .strip-content {
+      display: flex; align-items: center; justify-content: center;
+      gap: 36px; flex-wrap: wrap;
+    }
+    .strip-item {
+      display: flex; align-items: center; gap: 10px;
+      color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 0.3px;
+    }
+    .strip-item svg { width: 20px; height: 20px; color: var(--surv-amber); flex-shrink: 0; }
+    .strip-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.15); }
+
+    /* ───────────── DORES / O CENÁRIO REAL ───────────── */
+    #dores { background: var(--surv-dark); padding: 85px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .dores-header { text-align: center; margin-bottom: 50px; }
+    .dores-header .section-title { color: var(--surv-white); }
+    .dores-header .section-sub { color: rgba(255,255,255,0.65); margin: 0 auto; }
+
+    .news-cards-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;
+      margin-bottom: 40px;
+    }
+    .news-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-left: 4px solid var(--surv-amber);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+    }
+    .news-card.urgent { border-left-color: var(--surv-red); }
+    .news-source {
+      font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px;
+      color: var(--surv-amber); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+    }
+    .news-card.urgent .news-source { color: var(--surv-red); }
+    .news-title {
+      font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.4;
+    }
+    .news-desc {
+      font-size: 14px; color: rgba(255,255,255,0.70); line-height: 1.55;
+    }
+
+    .dores-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;
+    }
+    .dore-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: border-color .25s, transform .2s;
+    }
+    .dore-card:hover { border-color: rgba(245,158,11,0.4); transform: translateY(-3px); }
+    .dore-emoji { font-size: 32px; margin-bottom: 14px; }
+    .dore-card h4 { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .dore-text { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+
+    /* ───────────── PRODUCT (100 PÁGINAS) ───────────── */
+    #produto { padding: 95px 0; background: var(--surv-white); }
+    .produto-inner {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 54px; align-items: start;
+    }
+    .produto-tag { margin-bottom: 14px; }
+    .produto-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 900; line-height: 1.18; margin-bottom: 18px;
+    }
+    .produto-title span { color: var(--surv-red); }
+    .produto-desc { font-size: 16px; color: var(--surv-muted); line-height: 1.7; margin-bottom: 30px; }
+
+    .modulos-list { display: flex; flex-direction: column; gap: 14px; }
+    .modulo-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px 18px; border-radius: var(--radius-sm);
+      border: 1px solid var(--surv-gray-border);
+      background: #FFFFFF;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .modulo-item:hover {
+      border-color: var(--surv-amber);
+      box-shadow: 0 4px 18px rgba(245,158,11,0.12);
+    }
+    .modulo-num {
+      min-width: 38px; height: 38px; border-radius: 10px;
+      background: var(--surv-navy); color: var(--surv-amber);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 900; letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    .modulo-info { flex: 1; }
+    .modulo-title-text { font-size: 15px; font-weight: 800; margin-bottom: 4px; color: var(--surv-text); }
+    .modulo-desc-text { font-size: 13px; color: var(--surv-muted); line-height: 1.5; }
+
+    .produto-visual { position: sticky; top: 24px; }
+    .produto-card-img {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      border: 1px solid var(--surv-gray-border);
+    }
+
+    /* ───────────── BONUSES (50 PÁGINAS) ───────────── */
+    #bonus {
+      padding: 95px 0;
+      background: var(--surv-dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .bonus-header { text-align: center; margin-bottom: 54px; }
+    .bonus-header .section-title { color: var(--surv-white); }
+    .bonus-header .section-title span { color: var(--surv-amber); }
+    .bonus-header .section-sub { color: rgba(255,255,255,0.65); margin: 0 auto; }
+
+    .bonus-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;
+      margin-bottom: 44px;
+    }
+    .bonus-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: var(--radius);
+      padding: 34px 26px 26px;
+      position: relative;
+      transition: transform .25s, border-color .25s;
+    }
+    .bonus-card:hover { transform: translateY(-4px); border-color: rgba(245,158,11,0.40); }
+    .bonus-num {
+      position: absolute; top: -13px; left: 24px;
+      background: var(--surv-amber); color: #070D14;
+      font-size: 11px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 50px;
+    }
+    .bonus-icon { font-size: 36px; margin-bottom: 14px; }
+    .bonus-title { font-size: 19px; font-weight: 800; color: var(--surv-white); margin-bottom: 10px; }
+    .bonus-desc { font-size: 14px; color: rgba(255,255,255,0.70); line-height: 1.6; margin-bottom: 14px; }
+    .bonus-footer-badge {
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 12px; font-size: 12px; font-weight: 700;
+    }
+    .bonus-pages { color: var(--surv-amber); }
+    .bonus-val { color: rgba(255,255,255,0.50); text-decoration: line-through; }
+
+    .bonus-total-box {
+      background: linear-gradient(135deg, rgba(245,158,11,0.12) 0%, rgba(225,29,72,0.12) 100%);
+      border: 1px solid rgba(245,158,11,0.35);
+      border-radius: var(--radius);
+      padding: 36px; text-align: center;
+      max-width: 820px; margin: 0 auto;
+    }
+    .bonus-total-label { font-size: 14px; color: rgba(255,255,255,0.70); margin-bottom: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .bonus-total-value { font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 900; color: var(--surv-amber); }
+    .bonus-total-desc { font-size: 16px; color: rgba(255,255,255,0.85); margin-top: 10px; }
+
+    /* ───────────── PREVIEW CAROUSEL ───────────── */
+    #preview { padding: 90px 0; background: var(--surv-navy); }
+    .preview-header { text-align: center; margin-bottom: 48px; }
+    .preview-header .section-title { color: var(--surv-white); }
+    .preview-header .section-title span { color: var(--surv-amber); }
+    .preview-header .section-sub { color: rgba(255,255,255,0.65); margin: 0 auto; }
+
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      user-select: none;
+      padding: 10px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      flex: 0 0 calc(33.333% - 14px);
+      margin-right: 21px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: #FFFFFF;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .carousel-slide:hover {
+      transform: translateY(-5px) scale(1.02);
+      border-color: var(--surv-amber);
+      box-shadow: 0 12px 32px rgba(245,158,11,0.25);
+    }
+    .carousel-slide img { width: 100%; object-fit: cover; display: block; }
+    .carousel-slide-caption {
+      padding: 12px 14px; background: #070D14; color: #fff;
+      font-size: 12px; font-weight: 700; text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .carousel-slide-caption span { color: var(--surv-amber); }
+
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 10;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--surv-amber);
+      color: #070D14;
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      transition: background .2s, transform .2s;
+      font-size: 22px; font-weight: bold;
+    }
+    .carousel-btn:hover { background: #FBBF24; transform: translateY(-50%) scale(1.10); }
+    .carousel-btn.prev { left: -10px; }
+    .carousel-btn.next { right: -10px; }
+    .carousel-btn:disabled { opacity: 0.3; cursor: default; }
+
+    .carousel-dots {
+      display: flex; justify-content: center; align-items: center;
+      gap: 8px; margin-top: 28px;
+    }
+    .carousel-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      border: none; cursor: pointer; padding: 0;
+      transition: background .25s, transform .25s;
+    }
+    .carousel-dot.active {
+      background: var(--surv-amber);
+      transform: scale(1.35);
+    }
+
+    /* Lightbox */
+    .lightbox-overlay {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.94);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity .3s;
+    }
+    .lightbox-overlay.open { opacity: 1; pointer-events: all; }
+    .lightbox-img {
+      max-width: 90vw; max-height: 90vh;
+      border-radius: var(--radius);
+      box-shadow: 0 32px 80px rgba(0,0,0,0.85);
+      transition: transform .3s;
+    }
+    .lightbox-close {
+      position: absolute; top: 24px; right: 28px;
+      background: none; border: none; cursor: pointer;
+      color: #fff; font-size: 38px; line-height: 1;
+      opacity: 0.8; transition: opacity .2s;
+    }
+    .lightbox-close:hover { opacity: 1; color: var(--surv-amber); }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: var(--surv-amber); color: #070D14;
+      border: none; cursor: pointer;
+      width: 52px; height: 52px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      font-size: 24px; font-weight: bold;
+      transition: background .2s;
+    }
+    .lightbox-nav:hover { background: #FBBF24; }
+    .lightbox-nav.lb-prev { left: 24px; }
+    .lightbox-nav.lb-next { right: 24px; }
+
+    /* ───────────── PARA QUEM É ───────────── */
+    #para-quem { padding: 90px 0; background: var(--surv-gray); }
+    .para-quem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .para-quem-col {
+      background: #FFFFFF; border-radius: var(--radius); padding: 36px 30px;
+      border: 1px solid var(--surv-gray-border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .para-quem-col-title {
+      font-size: 19px; font-weight: 800; margin-bottom: 22px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .para-quem-col-title.yes { color: var(--surv-green); }
+    .para-quem-col-title.no  { color: var(--surv-red); }
+    .para-quem-list { display: flex; flex-direction: column; gap: 14px; list-style: none; }
+    .para-quem-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      font-size: 15px; line-height: 1.6;
+    }
+    .check-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+    /* ───────────── GARANTIA ───────────── */
+    #garantia { padding: 85px 0; background: var(--surv-white); }
+    .garantia-inner {
+      display: flex; gap: 48px; align-items: center;
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF2F2 100%);
+      border: 2px solid var(--surv-amber);
+      border-radius: 24px; padding: 48px;
+    }
+    .garantia-seal {
+      width: 150px; height: 150px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--surv-amber); color: #070D14;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 14px;
+      box-shadow: 0 8px 32px rgba(245,158,11,0.35);
+    }
+    .garantia-seal .num { font-family: 'Montserrat', sans-serif; font-size: 46px; font-weight: 900; line-height: 1; }
+    .garantia-seal .unit { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+    .garantia-seal .word { font-size: 11px; font-weight: 700; opacity: 0.9; }
+    .garantia-title { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; margin-bottom: 14px; color: var(--surv-text); }
+    .garantia-title span { color: var(--surv-red); }
+    .garantia-text { font-size: 16px; color: var(--surv-muted); line-height: 1.7; }
+
+    /* ───────────── PRICING ───────────── */
+    #pricing { padding: 95px 0; background: var(--surv-dark); border-top: 1px solid rgba(255,255,255,0.06); }
+    .pricing-header { text-align: center; margin-bottom: 52px; }
+    .pricing-header .section-title { color: var(--surv-white); }
+    .pricing-header .section-title span { color: var(--surv-amber); }
+    .pricing-header .section-sub { color: rgba(255,255,255,0.65); margin: 0 auto; }
+
+    .pricing-card {
+      max-width: 560px; margin: 0 auto;
+      background: var(--surv-navy);
+      border: 2px solid var(--surv-amber);
+      border-radius: 24px;
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.45);
+    }
+    .pricing-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 5px;
+      background: linear-gradient(90deg, var(--surv-amber) 0%, var(--surv-red) 100%);
+    }
+    .pricing-popular {
+      position: absolute; top: 20px; right: -32px;
+      background: var(--surv-amber); color: #070D14;
+      font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;
+      padding: 5px 40px;
+      transform: rotate(45deg);
+    }
+    .pricing-product-name {
+      font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--surv-amber); margin-bottom: 8px;
+    }
+    .pricing-title { font-family: 'Montserrat', sans-serif; font-size: 27px; font-weight: 900; color: var(--surv-white); margin-bottom: 26px; }
+
+    .pricing-includes { margin-bottom: 30px; }
+    .pricing-includes-title { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 16px; }
+    .pricing-item {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 15px; color: rgba(255,255,255,0.90);
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+      text-align: left;
+    }
+    .pricing-item:last-child { border-bottom: none; }
+    .pricing-item .pi-icon { color: var(--surv-green); font-size: 16px; flex-shrink: 0; font-weight: bold; }
+
+    .pricing-price-block { margin-bottom: 28px; }
+    .pricing-de {
+      font-size: 16px; color: rgba(255,255,255,0.40);
+      text-decoration: line-through; margin-bottom: 4px;
+    }
+    .pricing-por-label { font-size: 14px; color: rgba(255,255,255,0.70); font-weight: 600; }
+    .pricing-price { font-family: 'Montserrat', sans-serif; font-size: 64px; font-weight: 900; color: var(--surv-amber); line-height: 1; }
+    .pricing-price sub { font-size: 26px; vertical-align: middle; }
+    .pricing-price-note { font-size: 14px; color: rgba(255,255,255,0.55); margin-top: 6px; }
+
+    .pricing-guarantee { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,0.55); }
+
+    /* ───────────── FAQ ───────────── */
+    #faq { padding: 85px 0; background: var(--surv-gray); }
+    .faq-grid { max-width: 740px; margin: 0 auto; }
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--surv-gray-border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
+      padding: 20px 24px;
+      transition: border-color .2s;
+    }
+    .faq-item.open { border-color: var(--surv-amber); }
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; font-size: 17px; font-weight: 800;
+      gap: 16px; user-select: none; color: var(--surv-text);
+    }
+    .faq-question .icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--surv-navy); color: var(--surv-amber);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0; transition: transform .25s;
+    }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, padding .25s;
+    }
+    .faq-answer-inner { padding-top: 14px; font-size: 15px; color: var(--surv-muted); line-height: 1.7; }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-item.open .icon { transform: rotate(45deg); background: var(--surv-amber); color: #000; }
+
+    /* ───────────── FINAL CTA ───────────── */
+    #final-cta {
+      padding: 100px 0;
+      background: var(--gradient-hero);
+      position: relative; overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    #final-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(245,158,11,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .final-cta-inner { position: relative; z-index: 2; text-align: center; }
+    .final-cta-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(30px, 5vw, 54px);
+      font-weight: 900; color: var(--surv-white); line-height: 1.15; margin-bottom: 20px;
+    }
+    .final-cta-title span { color: var(--surv-amber); }
+    .final-cta-sub {
+      font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 40px; max-width: 620px;
+      margin-left: auto; margin-right: auto; line-height: 1.6;
+    }
+    .final-cta-price {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px; font-weight: 800; color: rgba(255,255,255,0.85);
+      margin-bottom: 24px;
+    }
+    .final-cta-price strong { color: var(--surv-amber); font-size: 26px; }
+
+    /* ───────────── FOOTER ───────────── */
+    #footer {
+      background: #05090F; color: rgba(255,255,255,0.45);
+      padding: 45px 20px; text-align: center; font-size: 13px;
+    }
+    .footer-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px; font-weight: 900; color: var(--surv-white);
+      margin-bottom: 12px;
+    }
+    .footer-logo span { color: var(--surv-amber); }
+    .footer-links { margin-bottom: 16px; }
+    .footer-links a { color: rgba(255,255,255,0.45); margin: 0 10px; transition: color .2s; }
+    .footer-links a:hover { color: var(--surv-amber); }
+    .footer-disclaimer { max-width: 720px; margin: 0 auto; line-height: 1.6; }
+
+    /* ───────────── STICKY CTA ───────────── */
+    #sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,18,26,0.97);
+      border-top: 2px solid var(--surv-amber);
+      padding: 14px 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      transform: translateY(100%);
+      transition: transform .4s;
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.5);
+    }
+    #sticky-cta.visible { transform: translateY(0); }
+    .sticky-cta-text { color: #fff; font-size: 15px; font-weight: 600; }
+    .sticky-cta-text span { color: var(--surv-amber); font-weight: 800; }
+    .sticky-btn {
+      background: var(--gradient-cta); color: #fff;
+      font-size: 14px; font-weight: 800;
+      padding: 12px 26px; border-radius: 50px;
+      white-space: nowrap; cursor: pointer;
+      transition: opacity .2s, transform .2s;
+    }
+    .sticky-btn:hover { opacity: 0.90; transform: scale(1.02); }
+
+    /* ───────────── RESPONSIVE ───────────── */
+    @media (max-width: 868px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { order: -1; }
+      .hero-float-badge { display: none; }
+      .produto-inner { grid-template-columns: 1fr; gap: 40px; }
+      .produto-visual { display: none; }
+      .para-quem-grid { grid-template-columns: 1fr; }
+      .garantia-inner { flex-direction: column; text-align: center; padding: 32px 24px; }
+      .pricing-card { padding: 32px 24px; }
+      .pricing-price { font-size: 50px; }
+      .btn-lg { font-size: 16px; padding: 18px 30px; }
+      #sticky-cta { flex-direction: column; text-align: center; }
+      .strip-divider { display: none; }
+      .carousel-slide { flex: 0 0 calc(85% - 8px); }
+      .carousel-btn.prev { left: 4px; }
+      .carousel-btn.next { right: 4px; }
+    }
+    @media (max-width: 480px) {
+      .carousel-slide { flex: 0 0 calc(94% - 4px); }
+    }
+
+    /* ───────────── ANIMATIONS ───────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp .65s ease both; }
+    .delay-1 { animation-delay: .15s; }
+    .delay-2 { animation-delay: .30s; }
+    .delay-3 { animation-delay: .45s; }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1407849521540371');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1407849521540371&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<!-- ═══════════════ URGENCY NEWS BAR ═══════════════ -->
+<div class="news-ticker-bar">
+  <span class="news-ticker-badge">🚨 ALERTA GLOBAL</span>
+  <span>Governos internacionais e órgãos de Defesa Civil recomendam oficialmente que as famílias tenham suprimentos para ao menos 7 dias.</span>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- LEFT: COPY -->
+      <div class="hero-copy">
+        <div class="hero-eyebrow fade-up">
+          <div class="hero-eyebrow-line"></div>
+          <span class="hero-eyebrow-text">PROTOCOLO DE RESILIÊNCIA DOMÉSTICA</span>
+        </div>
+
+        <p class="hero-pretitle fade-up delay-1">
+          MANUAL DEFINITIVO EM PDF · <strong class="hero-pretitle-pages">100 PÁGINAS + 50 PÁGINAS DE BÔNUS</strong>
+        </p>
+        
+        <h1 class="hero-title fade-up delay-1">
+          Você e Sua Família Estão Prontos para <span class="accent-amber">7 Dias Sem Luz, Água Encanada</span> e Mercados?
+        </h1>
+
+        <p class="hero-sub fade-up delay-2">
+          Enquanto governos pelo mundo alertam os cidadãos a estocarem itens essenciais, descubra o passo a passo prático, seguro e sem pânico para blindar a sua casa com o que você já tem — sem gastar fortunas e sem teorias malucas.
+        </p>
+
+        <ul class="hero-features fade-up delay-2">
+          <li class="hero-feature">
+            <span class="hero-feature-icon">⚡</span>
+            <span><strong>Os Primeiros 60 Minutos:</strong> Ações imediatas assim que os serviços caem para evitar perdas irreversíveis.</span>
+          </li>
+          <li class="hero-feature">
+            <span class="hero-feature-icon">💧</span>
+            <span><strong>Cálculo Real de Água & Fontes Ocultas:</strong> Como garantir consumo, cozimento e higiene sem desperdício.</span>
+          </li>
+          <li class="hero-feature">
+            <span class="hero-feature-icon">🥫</span>
+            <span><strong>Cardápio de 7 Dias Sem Fogo e Sem Geladeira:</strong> Nutrição segura com itens acessíveis de supermercado.</span>
+          </li>
+          <li class="hero-feature">
+            <span class="hero-feature-icon">📋</span>
+            <span><strong>Matriz Ficar ou Evacuar:</strong> Critérios técnicos para saber a hora exata de permanecer em casa ou sair.</span>
+          </li>
+        </ul>
+
+        <div class="hero-cta-group fade-up delay-3">
+          <a href="#pricing" class="btn btn-primary btn-lg">
+            🛡️ Quero Garantir o Protocolo de 7 Dias
+          </a>
+          <div class="hero-cta-note">
+            <span>⚡ Acesso imediato em PDF</span> · <span>🔒 Pagamento 100% seguro</span> · <span>🤝 Garantia incondicional de 7 dias</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: VISUAL MOCKUP -->
+      <div class="hero-visual fade-up delay-1">
+        <div class="hero-float-badge top-left">
+          📘 100 PÁGINAS GUIA
+        </div>
+        <div class="hero-float-badge bottom-right">
+          🎁 50 PÁGINAS BÔNUS
+        </div>
+
+        <div class="hero-mockup-wrapper">
+          <img src="assets/hero_bundle_mockup.webp" alt="Protocolo de Sobrevivência 7 Dias - Guia Completo + Bônus" class="hero-mockup-img" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TRUST & REASSURANCE STRIP ═══════════════ -->
+<div id="social-strip">
+  <div class="container">
+    <div class="strip-content">
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Protocolo Baseado em Fontes Oficiais</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span>Acesso Imediato no Celular ou Impressão</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>150 Páginas de Conteúdo Direto</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Garantia Total de Satisfação (7 Dias)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ DORES & CONTEXTO REAL ═══════════════ -->
+<section id="dores">
+  <div class="container">
+    <div class="dores-header">
+      <div class="badge badge-red" style="margin-bottom: 14px;">POR QUE AGORA?</div>
+      <h2 class="section-title">
+        Não É Paranoia. É o Que os Próprios <span class="accent-amber">Governos Estão Dizendo.</span>
+      </h2>
+      <p class="section-sub">
+        Nos últimos meses, órgãos oficiais da Europa e das Américas atualizaram suas cartilhas de defesa civil, orientando a população a estocar itens básicos para períodos de isolamento e colapso de infraestrutura.
+      </p>
+    </div>
+
+    <!-- NEWS CARDS -->
+    <div class="news-cards-grid">
+      <div class="news-card urgent">
+        <div class="news-source">🔴 GABINETE DO REINO UNIDO & DEFESA CIVIL</div>
+        <div class="news-title">Governo britânico lança campanha nacional orientando famílias a estocarem mantimentos</div>
+        <div class="news-desc">Recomendação oficial de água potável, comida não perecível, rádios analógicos e lanternas a pilha para enfrentar interrupções prolongadas.</div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-source">⚠️ PAÍSES NÓRDICOS (SUÉCIA, FINLÂNDIA, NORUEGA)</div>
+        <div class="news-title">Distribuição de milhões de manuais de sobrevivência doméstica para os lares</div>
+        <div class="news-desc">Instruções sobre como manter calor, higiene e alimentação em caso de colapso de energia elétrica, ataques cibernéticos ou guerras híbridas.</div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-source">⚡ EVENTOS CLIMÁTICOS & APAGÕES RECENTES</div>
+        <div class="news-title">Tempestades e falhas na rede deixam capitais sem luz e sem água por dias</div>
+        <div class="news-desc">Bombas prediais param, comércio fecha, caixas eletrônicos não funcionam e supermercados esvaziam suas prateleiras em menos de 48 horas.</div>
+      </div>
+    </div>
+
+    <!-- DORES GRID -->
+    <div class="dores-grid">
+      <div class="dore-card">
+        <div class="dore-emoji">🛒</div>
+        <h4>O Mito do "Vou ao Mercado"</h4>
+        <p class="dore-text">
+          Quando a crise estoura, as filas dobram esquinas em minutos, maquininhas de cartão param de funcionar e as prateleiras ficam desérticas. Tentar comprar suprimentos na hora do pânico é a pior escolha.
+        </p>
+      </div>
+
+      <div class="dore-card">
+        <div class="dore-emoji">🚰</div>
+        <h4>A Sede Silenciosa</h4>
+        <p class="dore-text">
+          A maioria das casas tem menos de 3 litros de água limpa na geladeira. Em 24 horas sem água na torneira ou sem energia nas bombas do condomínio, o desespero começa e a saúde da família fica exposta.
+        </p>
+      </div>
+
+      <div class="dore-card">
+        <div class="dore-emoji">🕯️</div>
+        <h4>O Perigo do Improviso</h4>
+        <p class="dore-text">
+          Usar fogareiros a gás em locais fechados, comer alimentos estragados na geladeira desligada ou ingerir água imprópria causa mais mortes e intoxicações do que a própria crise em si.
+        </p>
+      </div>
+
+      <div class="dore-card">
+        <div class="dore-emoji">👨‍👩‍👧‍👦</div>
+        <h4>A Responsabilidade Familiar</h4>
+        <p class="dore-text">
+          Quem tem filhos pequenos, idosos ou animais de estimação não pode se dar ao luxo de contar com a sorte. Ter um plano claro traz paz de espírito imediata para quem você mais ama.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ PRODUTO PRINCIPAL (100 PÁGINAS) ═══════════════ -->
+<section id="produto">
+  <div class="container">
+    <div class="produto-inner">
+
+      <!-- LEFT: COPY & 12 BLOCKS -->
+      <div class="produto-copy">
+        <div class="produto-tag">
+          <span class="tag">MANUAL PRINCIPAL · 100 PÁGINAS</span>
+        </div>
+        <h2 class="produto-title">
+          Conheça o <span>Protocolo de 7 Dias:</span> O Guia Completo Passo a Passo
+        </h2>
+        <p class="produto-desc">
+          Um material visual, direto ao ponto e ricamente estruturado em 12 blocos estratégicos para você implementar no seu ritmo, sem complicações:
+        </p>
+
+        <div class="modulos-list">
+          <div class="modulo-item">
+            <div class="modulo-num">01</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 1: Abertura e Contexto Real</div>
+              <div class="modulo-desc-text">A psicologia da prontidão sem histeria; avaliação lúcida dos riscos reais da sua região e como calibrar a mente para agir com calma.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">02</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 2: Primeiros 60 Minutos</div>
+              <div class="modulo-desc-text">O protocolo de ação imediata assim que os serviços caem: o que trancar, o que encher, o que desligar e como proteger seus recursos vitais.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">03</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 3: Blueprint da Casa por 7 Dias</div>
+              <div class="modulo-desc-text">Zoneamento tático dos cômodos para casas e apartamentos: quarto seguro de isolamento, área de preparo térmico, ventilação e segurança discreta.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">04</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 4: Água (O Recurso Mais Crítico)</div>
+              <div class="modulo-desc-text">Cálculo per capita exato; fontes ocultas dentro de casa (como acessar até 200L com segurança); métodos seguros de filtragem e cloração.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">05</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 5: Comida (Despensa Inteligente)</div>
+              <div class="modulo-desc-text">Quais alimentos de supermercado comprar, prazos de validade reais, como armazenar sem pragas e como organizar a despensa sem gastar fortunas.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">06</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 6: Cardápio de 7 Dias Sem Fogo e Sem Geladeira</div>
+              <div class="modulo-desc-text">Planejamento dia a dia de café da manhã, almoço e jantar que não exigem cozimento nem energia; preservação de água na louça e nutrição completa.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">07</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 7: Energia, Luz e Temperatura</div>
+              <div class="modulo-desc-text">Iluminação passiva e lanternas seguras; gerenciamento inteligente de baterias e celulares; conforto térmico sem ar-condicionado ou aquecedor.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">08</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 8: Higiene e Saúde Doméstica</div>
+              <div class="modulo-desc-text">Sanitização sem água encanada; gestão de dejetos sem riscos biológicos; montagem do kit de primeiros socorros e reserva de remédios de uso contínuo.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">09</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 9: Comunicação e Informação</div>
+              <div class="modulo-desc-text">Como saber o que está acontecendo se a internet e o 4G caírem; uso de rádio analógico AM/FM; rede de contatos e plano familiar de emergência.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">10</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 10: Ficar ou Evacuar (Matriz de Decisão)</div>
+              <div class="modulo-desc-text">Critérios técnicos e objetivos para saber o momento exato de continuar abrigado em casa ou evacuar com segurança; rotas e pontos de encontro.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">11</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 11: Pessoas, Pets e Necessidades Especiais</div>
+              <div class="modulo-desc-text">Cuidados essenciais com idosos, crianças, bebês, gestantes, pessoas com mobilidade reduzida e plano de alimentação e água para cães e gatos.</div>
+            </div>
+          </div>
+
+          <div class="modulo-item">
+            <div class="modulo-num">12</div>
+            <div class="modulo-info">
+              <div class="modulo-title-text">Bloco 12: Plano de Implementação e Simulado</div>
+              <div class="modulo-desc-text">Cronograma de 30 dias para montar seu kit aos poucos durante as compras de rotina; roteiro de simulado de fim de semana em família.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: STICKY VISUAL -->
+      <div class="produto-visual">
+        <div class="produto-card-img">
+          <img src="assets/product_guide_mockup.webp" alt="Guia do Protocolo de 7 Dias - 100 Páginas" />
+        </div>
+        <div style="margin-top: 24px; text-align: center;">
+          <a href="#pricing" class="btn btn-primary btn-full">
+            Quero Acesso ao Guia de 100 Páginas →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BONUS SECTION (50 PÁGINAS) ═══════════════ -->
+<section id="bonus">
+  <div class="container">
+    <div class="bonus-header">
+      <div class="badge badge-navy" style="margin-bottom: 14px;">PACOTE DE AÇÃO COMPLETO</div>
+      <h2 class="section-title">
+        Você Também Leva <span class="accent-amber">6 Bônus Exclusivos</span> (50 Páginas)
+      </h2>
+      <p class="section-sub">
+        Ferramentas práticas, planners e listas prontas de checagem para você não perder tempo pensando no que fazer. É só imprimir e agir.
+      </p>
+    </div>
+
+    <div class="bonus-grid">
+
+      <!-- BONUS 1 -->
+      <div class="bonus-card">
+        <span class="bonus-num">BÔNUS 01</span>
+        <div class="bonus-icon">📝</div>
+        <h3 class="bonus-title">Planners e Worksheets</h3>
+        <p class="bonus-desc">
+          Planilhas e fichas imprimíveis para mapear o perfil da família, cálculo personalizado de litros de água, necessidades calóricas e inventário doméstico.
+        </p>
+        <div class="bonus-footer-badge">
+          <span class="bonus-pages">📄 Bloco 1 · Formato A4 Imprimível</span>
+          <span class="bonus-val">Valor: R$ 37,00</span>
+        </div>
+      </div>
+
+      <!-- BONUS 2 -->
+      <div class="bonus-card">
+        <span class="bonus-num">BÔNUS 02</span>
+        <div class="bonus-icon">✅</div>
+        <h3 class="bonus-title">Checklists Prontos de Ação Rápida</h3>
+        <p class="bonus-desc">
+          Folhas operacionais plastificáveis para ações sob pressão: "Apagão Imediato", "Corte no Abastecimento de Água" e "Tempestade Severa".
+        </p>
+        <div class="bonus-footer-badge">
+          <span class="bonus-pages">📄 Bloco 2 · Ação Minuto a Minuto</span>
+          <span class="bonus-val">Valor: R$ 29,00</span>
+        </div>
+      </div>
+
+      <!-- BONUS 3 -->
+      <div class="bonus-card">
+        <span class="bonus-num">BÔNUS 03</span>
+        <div class="bonus-icon">🛒</div>
+        <h3 class="bonus-title">Inventários e Listas de Compras</h3>
+        <p class="bonus-desc">
+          Relação exata de compras organizada por corredores do supermercado (alimentos, farmácia, iluminação, ferramentas) para montar o kit sem desperdício.
+        </p>
+        <div class="bonus-footer-badge">
+          <span class="bonus-pages">📄 Bloco 3 · Otimizado para Supermercado</span>
+          <span class="bonus-val">Valor: R$ 35,00</span>
+        </div>
+      </div>
+
+      <!-- BONUS 4 -->
+      <div class="bonus-card">
+        <span class="bonus-num">BÔNUS 04</span>
+        <div class="bonus-icon">🍽️</div>
+        <h3 class="bonus-title">Menus e Variações Nutricionais</h3>
+        <p class="bonus-desc">
+          Adaptações completas de substituição para cardápios sem glúten, sem lactose, opções vegetarianas e alimentação facilitada para crianças e bebês.
+        </p>
+        <div class="bonus-footer-badge">
+          <span class="bonus-pages">📄 Bloco 4 · 7 Dias Detalhados</span>
+          <span class="bonus-val">Valor: R$ 32,00</span>
+        </div>
+      </div>
+
+      <!-- BONUS 5 -->
+      <div class="bonus-card">
+        <span class="bonus-num">BÔNUS 05</span>
+        <div class="bonus-icon">🪪</div>
+        <h3 class="bonus-title">Cartões e Fichas de Emergência</h3>
+        <p class="bonus-desc">
+          Cartões destacáveis para carteira e mochilas com telefones prioritários, tipos sanguíneos, alergias, endereços de acolhimento e rotas seguras.
+        </p>
+        <div class="bonus-footer-badge">
+          <span class="bonus-pages">📄 Bloco 5 · Para Carteiras e Bolsas</span>
+          <span class="bonus-val">Valor: R$ 27,00</span>
+        </div>
+      </div>
+
+      <!-- BONUS 6 -->
+      <div class="bonus-card">
+        <span class="bonus-num">BÔNUS 06</span>
+        <div class="bonus-icon">🔄</div>
+        <h3 class="bonus-title">Mini Anexos de Adaptação e Revisão</h3>
+        <p class="bonus-desc">
+          Roteiro semestral de auditoria: como girar o estoque de comida no consumo diário sem deixar vencer e quando renovar a água armazenada.
+        </p>
+        <div class="bonus-footer-badge">
+          <span class="bonus-pages">📄 Bloco 6 · Manutenção Anual Prática</span>
+          <span class="bonus-val">Valor: R$ 37,00</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BONUS VISUAL MOCKUP -->
+    <div style="text-align: center; margin-bottom: 36px;">
+      <img src="assets/bonus_mockup.webp" alt="Kit Completo de 6 Bônus Exclusivos" style="max-width: 680px; width: 100%; margin: 0 auto; border-radius: 16px; box-shadow: 0 16px 48px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.08);" />
+    </div>
+
+    <!-- TOTAL BONUS BOX -->
+    <div class="bonus-total-box">
+      <div class="bonus-total-label">VALOR TOTAL DOS 6 BÔNUS SE VENDIDOS SEPARADAMENTE</div>
+      <div class="bonus-total-value">R$ 197,00</div>
+      <div class="bonus-total-desc">
+        Hoje você leva <strong>todas as 50 páginas de bônus inteiramente GRÁTIS</strong> junto com o Guia Principal!
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ PREVIEW CAROUSEL ═══════════════ -->
+<section id="preview">
+  <div class="container">
+    <div class="preview-header">
+      <div class="badge badge-navy" style="margin-bottom: 14px;">TRANSPARÊNCIA TOTAL</div>
+      <h2 class="section-title">
+        Dê uma Olhada por Dentro do <span class="accent-amber">Material</span>
+      </h2>
+      <p class="section-sub">
+        Clique em qualquer página abaixo para ampliar e ver o padrão profissional, organizado e acessível que você vai receber:
+      </p>
+    </div>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" id="carouselPrev" aria-label="Página anterior">‹</button>
+      <button class="carousel-btn next" id="carouselNext" aria-label="Próxima página">›</button>
+
+      <div class="carousel-track" id="carouselTrack">
+
+        <div class="carousel-slide">
+          <img src="assets/preview_01_capa.webp" alt="Capa Oficial do Protocolo de Sobrevivência 7 Dias" />
+          <div class="carousel-slide-caption">
+            <span>Página 01</span> <strong>Capa Oficial do Protocolo</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_02_como_usar.webp" alt="Como Usar Este Livro e Metodologia de Ação" />
+          <div class="carousel-slide-caption">
+            <span>Página 04</span> <strong>Como Usar Este Guia</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_03_sumario.webp" alt="Sumário Completo - A Rota das 100 Páginas" />
+          <div class="carousel-slide-caption">
+            <span>Página 05</span> <strong>A Rota das 100 Páginas</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_04_noticias.webp" alt="Contexto Real e Recomendações Oficiais dos Governos" />
+          <div class="carousel-slide-caption">
+            <span>Página 06</span> <strong>Contexto Real & Notícias</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_05_objetivo_alimentar.webp" alt="Estratégia e Objetivo Alimentar de Emergência" />
+          <div class="carousel-slide-caption">
+            <span>Página 19</span> <strong>Objetivo Alimentar</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_06_preparacao_economia.webp" alt="Preparação Doméstica sem Gastos Excessivos" />
+          <div class="carousel-slide-caption">
+            <span>Página 26</span> <strong>Economia & Orçamento</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_07_gestao_agua.webp" alt="Cálculo Prático e Gestão Crítica de Água" />
+          <div class="carousel-slide-caption">
+            <span>Página 36</span> <strong>Cálculo de Água (42 Litros)</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_08_refeicoes_reais.webp" alt="A Comida que Você Realmente Comerá na Crise" />
+          <div class="carousel-slide-caption">
+            <span>Página 37</span> <strong>Alimentos Práticos de Crise</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_09_carboidratos_energia.webp" alt="Carboidratos e Energia sem Fogo e sem Geladeira" />
+          <div class="carousel-slide-caption">
+            <span>Página 40</span> <strong>Carboidratos & Energia</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_10_monoxido_seguranca.webp" alt="Segurança Crítica: Alerta contra Monóxido de Carbono" />
+          <div class="carousel-slide-caption">
+            <span>Página 62</span> <strong>Segurança: Risco Silencioso</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_11_ficar_em_casa.webp" alt="Matriz Ficar ou Evacuar: Quando Ficar no Lar" />
+          <div class="carousel-slide-caption">
+            <span>Página 82</span> <strong>Quando Ficar em Casa</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_12_evacuacao_imediata.webp" alt="Protocolo e Regras para Sair e Evacuar Imediatamente" />
+          <div class="carousel-slide-caption">
+            <span>Página 84</span> <strong>Quando Sair Imediatamente</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_13_bonus_compras.webp" alt="Caderno Bônus - Checklist de Compras de Supermercado" />
+          <div class="carousel-slide-caption">
+            <span>Bônus B15</span> <strong>Checklist: Proteínas</strong>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/preview_14_bonus_mochila.webp" alt="Caderno Bônus - Checklist da Mochila de Emergência" />
+          <div class="carousel-slide-caption">
+            <span>Bônus B43</span> <strong>Mochila de Emergência</strong>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+  <button class="lightbox-nav lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <img src="" alt="Página ampliada" class="lightbox-img" id="lightboxImg" />
+  <button class="lightbox-nav lb-next" id="lbNext" aria-label="Próxima">›</button>
+</div>
+
+<!-- ═══════════════ PARA QUEM É ═══════════════ -->
+<section id="para-quem">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 48px;">
+      <h2 class="section-title">
+        Este Protocolo É Indicado Para Você?
+      </h2>
+      <p class="section-sub">
+        Veja se este material atende ao que você procura antes de tomar sua decisão:
+      </p>
+    </div>
+
+    <div class="para-quem-grid">
+      <!-- SIM -->
+      <div class="para-quem-col">
+        <div class="para-quem-col-title yes">
+          <span>✅</span> Este Guia É Para Você Que:
+        </div>
+        <ul class="para-quem-list">
+          <li class="para-quem-item">
+            <span class="check-icon">✔️</span>
+            <span>Mora em casa ou apartamento e quer proteger sua família com bom senso e praticidade.</span>
+          </li>
+          <li class="para-quem-item">
+            <span class="check-icon">✔️</span>
+            <span>Quer saber exatamente quanta água, comida e remédios precisa ter sem desperdiçar dinheiro.</span>
+          </li>
+          <li class="para-quem-item">
+            <span class="check-icon">✔️</span>
+            <span>Entende que eventos climáticos extremos e apagões de energia já são uma realidade frequente.</span>
+          </li>
+          <li class="para-quem-item">
+            <span class="check-icon">✔️</span>
+            <span>Busca instruções claras e organizadas em vez de perder horas em vídeos soltos na internet.</span>
+          </li>
+          <li class="para-quem-item">
+            <span class="check-icon">✔️</span>
+            <span>Valoriza a paz de espírito de saber exatamente o que fazer no caso de uma emergência real.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- NÃO -->
+      <div class="para-quem-col">
+        <div class="para-quem-col-title no">
+          <span>❌</span> Este Guia NÃO É Para Você Que:
+        </div>
+        <ul class="para-quem-list">
+          <li class="para-quem-item">
+            <span class="check-icon">✖️</span>
+            <span>Acredita que 'nunca vai faltar nada' e prefere deixar a segurança da família na sorte.</span>
+          </li>
+          <li class="para-quem-item">
+            <span class="check-icon">✖️</span>
+            <span>Procura teorias conspiratórias apocalípticas ou tutoriais militares irrealistas.</span>
+          </li>
+          <li class="para-quem-item">
+            <span class="check-icon">✖️</span>
+            <span>Quer gastar dezenas de milhares de reais construindo bunkers subterrâneos na floresta.</span>
+          </li>
+          <li class="para-quem-item">
+            <span class="check-icon">✖️</span>
+            <span>Prefere improvisar perigosamente quando a água da torneira sumir e a luz acabar.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GARANTIA BLINDADA ═══════════════ -->
+<section id="garantia">
+  <div class="container">
+    <div class="garantia-inner">
+      <div class="garantia-seal">
+        <div class="num">7</div>
+        <div class="unit">Dias de</div>
+        <div class="word">Garantia</div>
+      </div>
+      <div>
+        <h3 class="garantia-title">
+          Garantia Blindada de Satisfação: <span>Seu Risco É Zero</span>
+        </h3>
+        <p class="garantia-text">
+          Você tem 7 dias completos para baixar o Protocolo de 100 páginas, analisar os 12 blocos e folhear todos os 6 cadernos de bônus. Se por qualquer motivo você achar que o material não entregou valor suficiente ou não atendeu às suas expectativas, basta enviar um único e-mail ou solicitar o reembolso direto na plataforma e devolveremos 100% do seu dinheiro, sem perguntas e sem ressentimentos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRICING & OFERTA ═══════════════ -->
+<section id="pricing">
+  <div class="container">
+    <div class="pricing-header">
+      <div class="badge badge-red" style="margin-bottom: 14px;">OFERTA DE LANÇAMENTO</div>
+      <h2 class="section-title">
+        Garanta o Protocolo Completo com <span class="accent-amber">Desconto Especial</span>
+      </h2>
+      <p class="section-sub">
+        Acesso vitalício, download imediato e todas as atualizações inclusas por um valor simbólico:
+      </p>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-popular">COMPLETO</div>
+      <div class="pricing-product-name">PACOTE PROTOCOLO 7 DIAS</div>
+      <h3 class="pricing-title">Guia Principal + 6 Bônus de Ação</h3>
+
+      <div class="pricing-includes">
+        <div class="pricing-includes-title">O que está incluído no seu acesso:</div>
+
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Guia Principal (100 Páginas):</strong> 12 Blocos de prontidão doméstica</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Bônus 01:</strong> Planners & Worksheets familiares imprimíveis</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Bônus 02:</strong> Checklists Prontos de Ação Rápida sob pressão</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Bônus 03:</strong> Inventários e Listas de Supermercado</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Bônus 04:</strong> Menus & Variações Nutricionais (7 Dias completos)</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Bônus 05:</strong> Cartões e Fichas de Bolso para Emergências</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Bônus 06:</strong> Mini Anexos de Adaptação & Rotação Anual</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Download Imediato em PDF:</strong> Leitura em celulares, tablets ou impressão</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pi-icon">✓</span>
+          <span><strong>Garantia Incondicional de 7 Dias:</strong> Risco zero para você</span>
+        </div>
+      </div>
+
+      <div class="pricing-price-block">
+        <div class="pricing-de">De R$ 97,00</div>
+        <div class="pricing-por-label">Por apenas pagamento único de</div>
+        <div class="pricing-price"><sub>R$</sub> 27,90</div>
+        <div class="pricing-price-note">Ou parcele no cartão · Acesso Vitalício</div>
+      </div>
+
+      <!-- Link de Checkout: Cole aqui o link da Kiwify, Hotmart, Wiapy, Monetizze, Eduzz, etc. -->
+      <a href="https://pay.wiapy.com/6ae7aeccc2ac364fc5638856" class="btn btn-primary btn-lg btn-full" id="cta-checkout">
+        🛡️ GARANTIR MEU ACESSO AGORA
+      </a>
+
+      <div class="pricing-guarantee">
+        🔒 Pagamento 100% Criptografado e Seguro · Acesso Liberado na Hora
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 48px;">
+      <h2 class="section-title">
+        Perguntas Frequentes
+      </h2>
+      <p class="section-sub">
+        Tire todas as suas dúvidas sobre o Protocolo de 7 Dias:
+      </p>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>1. Preciso gastar muito dinheiro com equipamentos caros ou militares?</span>
+          <div class="icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Não! Esse é um dos maiores diferenciais do Protocolo. O material foi desenvolvido pensando na realidade de lares normais. Você vai utilizar itens comuns de supermercado, farmácia e ferragens simples que cabem no orçamento familiar mensal.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>2. Eu moro em apartamento pequeno. O guia funciona para mim?</span>
+          <div class="icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Com certeza! O Bloco 3 (Blueprint da Casa) e o Bloco 4 (Água) contam com soluções desenhadas especificamente para ambientes compactos, ensinando como estocar e organizar suprimentos verticalmente e em áreas ocultas sem entulhar seu imóvel.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>3. Como e quando eu recebo o material?</span>
+          <div class="icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            O envio é 100% digital e imediato. Assim que o pagamento for aprovado (via Pix ou cartão de crédito), você recebe um e-mail com os links para download direto dos PDFs em alta resolução. Você pode ler no celular, computador, tablet ou até imprimir as páginas.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>4. O guia ensina receitas ou procedimentos perigosos?</span>
+          <div class="icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Absolutamente não. O material segue rigorosamente as diretrizes e boas práticas de agências internacionais de Defesa Civil e autoridades de saúde pública. Condenamos expressamente o uso de geradores ou fogareiros dentro de casa, dosagens caseiras de medicamentos ou soluções que coloquem a vida em risco.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>5. E se eu não gostar ou achar que não serviu para mim?</span>
+          <div class="icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Você conta com a nossa Garantia Incondicional de 7 Dias. Se por qualquer motivo você não ficar satisfeito, basta solicitar o estorno e devolveremos cada centavo pago. Sem burocracia.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FINAL CTA ═══════════════ -->
+<section id="final-cta">
+  <div class="container">
+    <div class="final-cta-inner">
+      <h2 class="final-cta-title">
+        Não Espere a Luz Apagar Para <br/>Descobrir Que <span>Sua Casa Não Estava Pronta.</span>
+      </h2>
+      <p class="final-cta-sub">
+        Segurança e prontidão não são sobre medo — são sobre responsabilidade e cuidado com quem depende de você. Tenha um plano claro e proteja sua família.
+      </p>
+      <p class="final-cta-price">
+        Guia Principal (100 Páginas) + 6 Bônus (50 Páginas) por apenas <strong>R$ 27,90</strong>
+      </p>
+      <a href="#pricing" class="btn btn-primary btn-lg">
+        🛡️ Garantir Meu Protocolo com Bônus Agora
+      </a>
+      <p style="margin-top: 22px; font-size: 14px; color: rgba(255,255,255,0.50);">
+        🔒 Pagamento 100% Seguro · Download Imediato em PDF · 7 Dias de Garantia Total
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer id="footer">
+  <div class="footer-logo">Protocolo <span>7 Dias</span></div>
+  <div class="footer-links">
+    <a href="#">Termos de Uso</a>
+    <a href="#">Política de Privacidade</a>
+    <a href="#">Contato e Suporte</a>
+  </div>
+  <p class="footer-disclaimer">
+    Esta é uma publicação educativa independente de preparação e resiliência doméstica. Não substitui orientações de evacuação oficiais de autoridades públicas, corpo de bombeiros ou órgãos de defesa civil. Em situações de perigo iminente à vida, acione imediatamente os serviços de emergência (190, 192 ou 193).
+    <br/>Todos os direitos reservados © 2026.
+  </p>
+</footer>
+
+<!-- ═══════════════ STICKY CTA ═══════════════ -->
+<div id="sticky-cta">
+  <div class="sticky-cta-text">
+    Protocolo 7 Dias (100 Págs) + <span>6 Bônus Exclusivos</span> por R$ 27,90
+  </div>
+  <a href="#pricing" class="sticky-btn">Quero Meu Acesso →</a>
+</div>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script>
+  /* ── Redirecionamento com passagem de parâmetros de URL ── */
+  const CHECKOUT_BASE_URL = 'https://pay.wiapy.com/6ae7aeccc2ac364fc5638856';
+
+  function goToCheckout() {
+    const search = window.location.search || '';
+    const delimiter = CHECKOUT_BASE_URL.includes('?') ? (search.startsWith('?') ? '&' + search.substring(1) : search) : search;
+    const finalUrl = CHECKOUT_BASE_URL + delimiter;
+    window.location.href = finalUrl;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="pay.wiapy.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        goToCheckout();
+      });
+    });
+  });
+
+  /* ── FAQ Toggle ── */
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── Sticky CTA ── */
+  const stickyCta   = document.getElementById('sticky-cta');
+  const heroSection = document.getElementById('hero');
+  if (stickyCta && heroSection) {
+    const stickyObs = new IntersectionObserver(
+      ([e]) => stickyCta.classList.toggle('visible', !e.isIntersecting),
+      { threshold: 0.1 }
+    );
+    stickyObs.observe(heroSection);
+  }
+
+  /* ── Scroll animations ── */
+  const animEls = document.querySelectorAll('.fade-up');
+  const animObs = new IntersectionObserver(
+    (entries) => entries.forEach(e => {
+      if (e.isIntersecting) e.target.style.animationPlayState = 'running';
+    }),
+    { threshold: 0.1 }
+  );
+  animEls.forEach(el => {
+    el.style.animationPlayState = 'paused';
+    animObs.observe(el);
+  });
+
+  /* ══════════════════════════════════════
+     CAROUSEL & LIGHTBOX
+  ══════════════════════════════════════ */
+  (function () {
+    const track      = document.getElementById('carouselTrack');
+    if (!track) return;
+    const slides     = Array.from(track.querySelectorAll('.carousel-slide'));
+    const btnPrev    = document.getElementById('carouselPrev');
+    const btnNext    = document.getElementById('carouselNext');
+    const dotsWrap   = document.getElementById('carouselDots');
+
+    function visibleCount() {
+      if (window.innerWidth < 480) return 1;
+      if (window.innerWidth < 868) return 1;
+      return 3;
+    }
+
+    let current = 0;
+    const total = slides.length;
+
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      const steps = total - visibleCount() + 1;
+      for (let i = 0; i < steps; i++) {
+        const d = document.createElement('button');
+        d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(d);
+      }
+    }
+
+    function updateDots() {
+      dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) =>
+        d.classList.toggle('active', i === current)
+      );
+    }
+
+    function slideWidth() {
+      const vc   = visibleCount();
+      const gap  = 21;
+      const wrap = track.parentElement.offsetWidth;
+      return (wrap - gap * (vc - 1)) / vc + gap;
+    }
+
+    function goTo(index) {
+      const maxIndex = total - visibleCount();
+      current = Math.max(0, Math.min(index, maxIndex));
+      track.style.transform = `translateX(-${current * slideWidth()}px)`;
+      if (btnPrev) btnPrev.disabled = current === 0;
+      if (btnNext) btnNext.disabled = current >= maxIndex;
+      updateDots();
+    }
+
+    if (btnPrev) btnPrev.addEventListener('click', () => goTo(current - 1));
+    if (btnNext) btnNext.addEventListener('click', () => goTo(current + 1));
+
+    let autoTimer = setInterval(() => {
+      const maxIndex = total - visibleCount();
+      goTo(current < maxIndex ? current + 1 : 0);
+    }, 4500);
+
+    function pauseAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => {
+        const maxIndex = total - visibleCount();
+        goTo(current < maxIndex ? current + 1 : 0);
+      }, 5500);
+    }
+    if (btnPrev) btnPrev.addEventListener('click', pauseAuto);
+    if (btnNext) btnNext.addEventListener('click', pauseAuto);
+    dotsWrap.addEventListener('click', pauseAuto);
+
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); pauseAuto(); }
+    });
+
+    window.addEventListener('resize', () => { buildDots(); goTo(current); });
+
+    buildDots();
+    goTo(0);
+
+    /* ── LIGHTBOX ── */
+    const overlay   = document.getElementById('lightbox');
+    const lbImg     = document.getElementById('lightboxImg');
+    const lbClose   = document.getElementById('lightboxClose');
+    const lbPrev    = document.getElementById('lbPrev');
+    const lbNext    = document.getElementById('lbNext');
+    let   lbCurrent = 0;
+
+    const allSrcs = slides.map(s => s.querySelector('img').src);
+    const allAlts = slides.map(s => s.querySelector('img').alt);
+
+    function openLightbox(index) {
+      lbCurrent = index;
+      lbImg.src = allSrcs[lbCurrent];
+      lbImg.alt = allAlts[lbCurrent];
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function lbGo(dir) {
+      lbCurrent = (lbCurrent + dir + total) % total;
+      lbImg.src = allSrcs[lbCurrent];
+      lbImg.alt = allAlts[lbCurrent];
+    }
+
+    slides.forEach((s, i) => s.addEventListener('click', () => openLightbox(i)));
+    if (lbClose) lbClose.addEventListener('click', closeLightbox);
+    if (overlay) overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
+    if (lbPrev)  lbPrev.addEventListener('click', e => { e.stopPropagation(); lbGo(-1); });
+    if (lbNext)  lbNext.addEventListener('click', e => { e.stopPropagation(); lbGo(1);  });
+    document.addEventListener('keydown', e => {
+      if (!overlay || !overlay.classList.contains('open')) return;
+      if (e.key === 'ArrowLeft')  lbGo(-1);
+      if (e.key === 'ArrowRight') lbGo(1);
+      if (e.key === 'Escape')     closeLightbox();
+    });
+  })();
+</script>
+
+</body>
+</html>

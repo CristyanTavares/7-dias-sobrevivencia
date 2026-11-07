@@ -793,12 +793,20 @@
 
   <!-- Meta Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1407849521540371');
-    fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2339974420127897');
+  fbq('track', 'PageView');
+  fbq('track', 'InitiateCheckout');
   </script>
   <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1407849521540371&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2339974420127897&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
 </head>
@@ -854,7 +862,7 @@
         </ul>
 
         <div class="hero-cta-group fade-up delay-3">
-          <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" class="btn btn-primary btn-lg">
+          <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" onclick="return goToCheckout(event);" class="btn btn-primary btn-lg">
             🛡️ Quero Garantir o Protocolo de 7 Dias
           </a>
           <div class="hero-cta-note">
@@ -1103,7 +1111,7 @@
           <img src="assets/product_guide_mockup.webp" alt="Guia do Protocolo de 7 Dias - 100 Páginas" />
         </div>
         <div style="margin-top: 24px; text-align: center;">
-          <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" class="btn btn-primary btn-full">
+          <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" onclick="return goToCheckout(event);" class="btn btn-primary btn-full">
             Quero Acesso ao Guia de 100 Páginas →
           </a>
         </div>
@@ -1521,7 +1529,7 @@
       </div>
 
       <!-- Link de Checkout: Cole aqui o link da Kiwify, Hotmart, Wiapy, Monetizze, Eduzz, etc. -->
-      <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" class="btn btn-primary btn-lg btn-full" id="cta-checkout">
+      <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" onclick="return goToCheckout(event);" class="btn btn-primary btn-lg btn-full" id="cta-checkout">
         🛡️ GARANTIR MEU ACESSO AGORA
       </a>
 
@@ -1621,7 +1629,7 @@
       <p class="final-cta-price">
         Guia Principal (100 Páginas) + 6 Bônus (50 Páginas) por apenas <strong>R$ 27,90</strong>
       </p>
-      <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" class="btn btn-primary btn-lg">
+      <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" onclick="return goToCheckout(event);" class="btn btn-primary btn-lg">
         🛡️ Garantir Meu Protocolo com Bônus Agora
       </a>
       <p style="margin-top: 22px; font-size: 14px; color: rgba(255,255,255,0.50);">
@@ -1650,26 +1658,37 @@
   <div class="sticky-cta-text">
     Protocolo 7 Dias (100 Págs) + <span>6 Bônus Exclusivos</span> por R$ 27,90
   </div>
-  <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" class="sticky-btn">Quero Meu Acesso →</a>
+  <a href="https://pay.wiapy.com/6aef596d371815cbec86ea7b" onclick="return goToCheckout(event);" class="sticky-btn">Quero Meu Acesso →</a>
 </div>
 
 <!-- ═══════════════ SCRIPTS ═══════════════ -->
 <script>
-  /* ── Redirecionamento com passagem de parâmetros de URL ── */
+  /* ── Redirecionamento com passagem forçada de parâmetros de URL (window.location.search -> window.location.href) ── */
   const CHECKOUT_BASE_URL = 'https://pay.wiapy.com/6aef596d371815cbec86ea7b';
 
-  function goToCheckout() {
+  function buildCheckoutUrl(baseUrl) {
+    const base = baseUrl || CHECKOUT_BASE_URL;
     const search = window.location.search || '';
-    const delimiter = CHECKOUT_BASE_URL.includes('?') ? (search.startsWith('?') ? '&' + search.substring(1) : search) : search;
-    const finalUrl = CHECKOUT_BASE_URL + delimiter;
+    if (!search) return base;
+    const cleanSearch = search.startsWith('?') ? search.substring(1) : search;
+    if (!cleanSearch) return base;
+    return base + (base.includes('?') ? '&' : '?') + cleanSearch;
+  }
+
+  function goToCheckout(e) {
+    if (e && typeof e.preventDefault === 'function') {
+      e.preventDefault();
+    }
+    const finalUrl = buildCheckoutUrl(CHECKOUT_BASE_URL);
     window.location.href = finalUrl;
+    return false;
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href*="pay.wiapy.com"]').forEach(function(link) {
+    document.querySelectorAll('a[href*="pay.wiapy.com"], .js-checkout-btn').forEach(function(link) {
+      link.href = buildCheckoutUrl(CHECKOUT_BASE_URL);
       link.addEventListener('click', function(e) {
-        e.preventDefault();
-        goToCheckout();
+        return goToCheckout(e);
       });
     });
   });

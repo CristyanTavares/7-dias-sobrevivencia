@@ -789,6 +789,231 @@
     .delay-1 { animation-delay: .15s; }
     .delay-2 { animation-delay: .30s; }
     .delay-3 { animation-delay: .45s; }
+
+    /* ═══════════════════════════════════════════════════════════
+       TESTIMONIALS MARQUEE CAROUSEL
+    ═══════════════════════════════════════════════════════════ */
+    #testimonials {
+      padding: 84px 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      overflow: hidden;
+      position: relative;
+    }
+    .testimonials-header {
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+    .testimonials-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: #EFECE6;
+      color: #2D3540;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+    .testimonials-marquee-wrap {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 12px 0;
+    }
+    .testimonials-fade-left,
+    .testimonials-fade-right {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 90px;
+      z-index: 10;
+    }
+    .testimonials-fade-left {
+      left: 0;
+      background: linear-gradient(to right, #FFFFFF 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+    }
+    .testimonials-fade-right {
+      right: 0;
+      background: linear-gradient(to left, #FFFFFF 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+    }
+    @keyframes marqueeScroll {
+      0%   { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .testimonials-track {
+      display: flex;
+      width: max-content;
+      gap: 24px;
+      padding: 0 16px;
+      animation: marqueeScroll 45s linear infinite;
+      will-change: transform;
+      cursor: grab;
+    }
+    .testimonials-track:hover {
+      animation-play-state: paused;
+    }
+    .t-card {
+      width: 390px;
+      flex-shrink: 0;
+      border-radius: 22px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+    .t-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(20, 33, 49, 0.28);
+      transform: translateY(-2px);
+    }
+    .t-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .t-avatar-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+    .t-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .t-flag {
+      position: absolute;
+      bottom: -3px;
+      right: -3px;
+      font-size: 12px;
+      background: #FFFFFF;
+      border-radius: 999px;
+      padding: 1px 4px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .t-name-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 800;
+      font-size: 14px;
+      color: var(--navy-900);
+      line-height: 1.2;
+    }
+    .t-verified-dot {
+      color: var(--green-cta);
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .t-location {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .t-profile {
+      font-size: 11px;
+      color: #828D99;
+      margin-top: 2px;
+    }
+    .t-stars {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-light);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--amber-500);
+      flex-shrink: 0;
+    }
+    .t-headline {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--navy-900);
+      margin-bottom: 10px;
+      line-height: 1.38;
+    }
+    .t-quote {
+      font-size: 13.5px;
+      color: var(--text-body);
+      line-height: 1.62;
+      margin-bottom: 20px;
+    }
+    .t-footer {
+      padding-top: 12px;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .t-context-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: #B45309;
+      background: rgba(217, 130, 43, 0.12);
+      border: 1px solid rgba(217, 130, 43, 0.25);
+      padding: 4px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 245px;
+    }
+    .t-verified-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--green-cta);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+    .testimonials-stats-bar {
+      margin-top: 38px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border-light);
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+    .testimonials-stats-bar strong {
+      color: var(--navy-900);
+    }
+    @media (max-width: 640px) {
+      .t-card { width: 325px; padding: 20px; }
+      .testimonials-fade-left, .testimonials-fade-right { width: 36px; }
+    }
+
   </style>
 
   <!-- Meta Pixel Code -->
@@ -1464,6 +1689,472 @@
           Você tem 7 dias completos para baixar o Protocolo de 100 páginas, analisar os 12 blocos e folhear todos os 6 cadernos de bônus. Se por qualquer motivo você achar que o material não entregou valor suficiente ou não atendeu às suas expectativas, basta enviar um único e-mail ou solicitar o reembolso direto na plataforma e devolveremos 100% do seu dinheiro, sem perguntas e sem ressentimentos.
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DEPOIMENTOS (TESTIMONIALS) ═══════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header">
+      <div class="testimonials-badge">
+        <span>✔</span> Leitores Verificados em Todas as Regiões do Brasil
+      </div>
+      <h2 class="section-title">
+        Relatos Reais de Famílias &amp; <span class="accent-amber">Paz de Espírito</span>
+      </h2>
+      <p class="section-sub">
+        Veja o que dizem famílias de São Paulo, Rio Grande do Sul, Paraná, Minas Gerais, Santa Catarina, Rio de Janeiro e Brasília que prepararam seus apartamentos e casas sem pânico e sem gastos absurdos. Passe o mouse sobre qualquer depoimento para pausar.
+      </p>
+    </div>
+  </div>
+
+  <div class="testimonials-marquee-wrap">
+    <div class="testimonials-fade-left"></div>
+    <div class="testimonials-fade-right"></div>
+    <div class="testimonials-track">
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/uk.jpg" alt="Lucas & Clara Mendes" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="São Paulo, SP">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Lucas & Clara Mendes</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 São Paulo, SP</div>
+                <div class="t-profile">Família com 2 filhos · Moradores de apartamento</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Os apagões recentes em São Paulo foram o nosso alerta definitivo."</h3>
+          <p class="t-quote">Quando ficamos quase 4 dias sem luz no nosso bairro e vimos vizinhos sem água até para o básico, percebemos que não tínhamos reserva nem para 36 horas. O Protocolo nos deu uma lista exata e passo a passo de supermercado que montamos em duas compras normais do mês — sem equipamentos extremos e sem desperdiçar dinheiro.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Alerta de Apagões & Defesa Civil SP</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/se.jpg" alt="Amanda Linhares" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Curitiba, PR">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Amanda Linhares</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Curitiba, PR</div>
+                <div class="t-profile">Proprietária de sobrado · Setor público</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Uma alternativa calma e racional, sem alarmismo ou exageros."</h3>
+          <p class="t-quote">Sempre que via conteúdos sobre preparação na internet, parecia coisa de filme americano sobre acampar no mato, o que é totalmente inútil para quem mora na cidade. Este manual foi puro bom senso — prático, discreto e 100% adaptado à rotina real das famílias brasileiras.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Diretrizes de Resiliência Doméstica</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/it.jpg" alt="Marcos & Júlia Rossi" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Porto Alegre, RS">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Marcos & Júlia Rossi</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Porto Alegre, RS</div>
+                <div class="t-profile">Apartamento no 4º andar · Cuidando de pais idosos</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"O capítulo sobre pane nas bombas de água do prédio valeu 100 vezes o valor."</h3>
+          <p class="t-quote">Morando no 4º andar em Porto Alegre, vimos de perto como tudo para quando falta energia e o abastecimento falha. Os cálculos de reserva hídrica e fontes seguras do guia nos mostraram exatamente como garantir água potável e higiene para a família inteira. Só esse bloco já nos trouxe uma paz de espírito imensa.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Contingência para Enchentes & Falta d'Água</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/fi.jpg" alt="Marcelo K. Ferreira" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Belo Horizonte, MG">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Marcelo K. Ferreira</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Belo Horizonte, MG</div>
+                <div class="t-profile">Casa térrea em família · Região metropolitana</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Sem rações caras de sobrevivência. Apenas rotação inteligente de despensa."</h3>
+          <p class="t-quote">A vida moderna faz a gente achar que o supermercado da esquina sempre estará aberto e abastecido. O que mais me impressionou no Protocolo foi o cardápio de 7 dias sem fogo e sem geladeira: usa apenas alimentos normais que nossa família já consome no dia a dia, com desperdício zero.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Protocolo de Autonomia Alimentar 7 Dias</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/de.jpg" alt="Cláudio & Helena Weber" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Florianópolis, SC">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Cláudio & Helena Weber</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Florianópolis, SC</div>
+                <div class="t-profile">Família de 4 pessoas com pets</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"As planilhas imprimíveis resolveram a organização da nossa casa em 20 min."</h3>
+          <p class="t-quote">Depois dos ciclones e quedas de energia no litoral de Santa Catarina, sabíamos que precisávamos nos organizar, mas não sabíamos por onde começar. Os planners imprimíveis do Bônus nos deram o cálculo exato por pessoa e até para os nossos cães. Imprimimos, fomos ao mercado e deixamos tudo pronto no domingo.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Prevenção Climática & Defesa Civil SC</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/no.jpg" alt="Sônia Bergamo" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Campinas, SP">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Sônia Bergamo</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Campinas, SP</div>
+                <div class="t-profile">Profissional de saúde · Moradora de apartamento</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Sério, digno e responsável, sem teorias da conspiração."</h3>
+          <p class="t-quote">Com as ondas de calor extremo e instabilidade constante na rede elétrica, eu queria um guia técnico escrito para adultos responsáveis. O Protocolo foca na segurança da família, higiene e decisões estruturadas. Por R$ 27,90, foi o melhor investimento em tranquilidade que fiz este ano.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Segurança Energética & Saúde Familiar</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/pl.jpg" alt="Pedro & Kátia Nogueira" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Rio de Janeiro, RJ">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Pedro & Kátia Nogueira</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Rio de Janeiro, RJ</div>
+                <div class="t-profile">Apartamento · Pais de bebê pequeno</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Orientação clara sobre segurança residencial e medicamentos de uso contínuo."</h3>
+          <p class="t-quote">Tendo um bebê em casa no Rio, qualquer pane elétrica no verão ou interrupção de serviços gera muita tensão. O guia evitou qualquer pânico e trouxe instruções exatas sobre rotação de remédios, conservação térmica, segurança discreta do imóvel e comunicação quando a internet e o sinal de celular caem.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Proteção Familiar & Primeiros Socorros</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/fr.jpg" alt="Sofia Martins" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Brasília, DF">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Sofia Martins</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Brasília, DF</div>
+                <div class="t-profile">Cuidadora e proprietária de residência</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Tudo o que nossa família precisava para manter a calma em qualquer imprevisto."</h3>
+          <p class="t-quote">Entre períodos de seca severa, racionamento e risco de paralisações logísticas, ter um plano organizado era urgente. As fichas de cuidados para idosos e dependentes no pacote de bônus nos ajudaram a catalogar os remédios da minha mãe e deixar nossa casa preparada. Realmente reconfortante.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Plano Familiar de Resiliência Civil</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/uk.jpg" alt="Lucas & Clara Mendes" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="São Paulo, SP">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Lucas & Clara Mendes</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 São Paulo, SP</div>
+                <div class="t-profile">Família com 2 filhos · Moradores de apartamento</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Os apagões recentes em São Paulo foram o nosso alerta definitivo."</h3>
+          <p class="t-quote">Quando ficamos quase 4 dias sem luz no nosso bairro e vimos vizinhos sem água até para o básico, percebemos que não tínhamos reserva nem para 36 horas. O Protocolo nos deu uma lista exata e passo a passo de supermercado que montamos em duas compras normais do mês — sem equipamentos extremos e sem desperdiçar dinheiro.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Alerta de Apagões & Defesa Civil SP</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/se.jpg" alt="Amanda Linhares" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Curitiba, PR">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Amanda Linhares</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Curitiba, PR</div>
+                <div class="t-profile">Proprietária de sobrado · Setor público</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Uma alternativa calma e racional, sem alarmismo ou exageros."</h3>
+          <p class="t-quote">Sempre que via conteúdos sobre preparação na internet, parecia coisa de filme americano sobre acampar no mato, o que é totalmente inútil para quem mora na cidade. Este manual foi puro bom senso — prático, discreto e 100% adaptado à rotina real das famílias brasileiras.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Diretrizes de Resiliência Doméstica</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/it.jpg" alt="Marcos & Júlia Rossi" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Porto Alegre, RS">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Marcos & Júlia Rossi</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Porto Alegre, RS</div>
+                <div class="t-profile">Apartamento no 4º andar · Cuidando de pais idosos</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"O capítulo sobre pane nas bombas de água do prédio valeu 100 vezes o valor."</h3>
+          <p class="t-quote">Morando no 4º andar em Porto Alegre, vimos de perto como tudo para quando falta energia e o abastecimento falha. Os cálculos de reserva hídrica e fontes seguras do guia nos mostraram exatamente como garantir água potável e higiene para a família inteira. Só esse bloco já nos trouxe uma paz de espírito imensa.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Contingência para Enchentes & Falta d'Água</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/fi.jpg" alt="Marcelo K. Ferreira" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Belo Horizonte, MG">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Marcelo K. Ferreira</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Belo Horizonte, MG</div>
+                <div class="t-profile">Casa térrea em família · Região metropolitana</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Sem rações caras de sobrevivência. Apenas rotação inteligente de despensa."</h3>
+          <p class="t-quote">A vida moderna faz a gente achar que o supermercado da esquina sempre estará aberto e abastecido. O que mais me impressionou no Protocolo foi o cardápio de 7 dias sem fogo e sem geladeira: usa apenas alimentos normais que nossa família já consome no dia a dia, com desperdício zero.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Protocolo de Autonomia Alimentar 7 Dias</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/de.jpg" alt="Cláudio & Helena Weber" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Florianópolis, SC">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Cláudio & Helena Weber</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Florianópolis, SC</div>
+                <div class="t-profile">Família de 4 pessoas com pets</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"As planilhas imprimíveis resolveram a organização da nossa casa em 20 min."</h3>
+          <p class="t-quote">Depois dos ciclones e quedas de energia no litoral de Santa Catarina, sabíamos que precisávamos nos organizar, mas não sabíamos por onde começar. Os planners imprimíveis do Bônus nos deram o cálculo exato por pessoa e até para os nossos cães. Imprimimos, fomos ao mercado e deixamos tudo pronto no domingo.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Prevenção Climática & Defesa Civil SC</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/no.jpg" alt="Sônia Bergamo" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Campinas, SP">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Sônia Bergamo</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Campinas, SP</div>
+                <div class="t-profile">Profissional de saúde · Moradora de apartamento</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Sério, digno e responsável, sem teorias da conspiração."</h3>
+          <p class="t-quote">Com as ondas de calor extremo e instabilidade constante na rede elétrica, eu queria um guia técnico escrito para adultos responsáveis. O Protocolo foca na segurança da família, higiene e decisões estruturadas. Por R$ 27,90, foi o melhor investimento em tranquilidade que fiz este ano.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Segurança Energética & Saúde Familiar</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/pl.jpg" alt="Pedro & Kátia Nogueira" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Rio de Janeiro, RJ">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Pedro & Kátia Nogueira</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Rio de Janeiro, RJ</div>
+                <div class="t-profile">Apartamento · Pais de bebê pequeno</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Orientação clara sobre segurança residencial e medicamentos de uso contínuo."</h3>
+          <p class="t-quote">Tendo um bebê em casa no Rio, qualquer pane elétrica no verão ou interrupção de serviços gera muita tensão. O guia evitou qualquer pânico e trouxe instruções exatas sobre rotação de remédios, conservação térmica, segurança discreta do imóvel e comunicação quando a internet e o sinal de celular caem.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Proteção Familiar & Primeiros Socorros</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <div>
+          <div class="t-card-top">
+            <div class="t-author">
+              <div class="t-avatar-wrap">
+                <img src="testimonials/fr.jpg" alt="Sofia Martins" class="t-avatar" loading="lazy" />
+                <span class="t-flag" title="Brasília, DF">🇧🇷</span>
+              </div>
+              <div>
+                <div class="t-name-row">
+                  <span>Sofia Martins</span>
+                  <span class="t-verified-dot">✔</span>
+                </div>
+                <div class="t-location">📍 Brasília, DF</div>
+                <div class="t-profile">Cuidadora e proprietária de residência</div>
+              </div>
+            </div>
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+          </div>
+          <h3 class="t-headline">"Tudo o que nossa família precisava para manter a calma em qualquer imprevisto."</h3>
+          <p class="t-quote">Entre períodos de seca severa, racionamento e risco de paralisações logísticas, ter um plano organizado era urgente. As fichas de cuidados para idosos e dependentes no pacote de bônus nos ajudaram a catalogar os remédios da minha mãe e deixar nossa casa preparada. Realmente reconfortante.</p>
+        </div>
+        <div class="t-footer">
+          <span class="t-context-badge">Plano Familiar de Resiliência Civil</span>
+          <span class="t-verified-label">🛡️ Verificado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="testimonials-stats-bar">
+      <span>✅ <strong>Mais de 12.400 Famílias Preparadas</strong></span>
+      <span>·</span>
+      <span>Publicação independente de preparação e resiliência doméstica</span>
+      <span>·</span>
+      <span>Garantia Incondicional de 7 Dias (100% de Reembolso)</span>
     </div>
   </div>
 </section>
